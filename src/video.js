@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 
 /* The invite link shown on the last frame. Change it after deploying the new design. */
-const INVITE_URL = "chandu-weds-dev.vercel.app";
+const INVITE_URL = "deven-weds-chandni.vercel.app";
 
 export const DURATION = 32.2;
 const warp = (t) => 19.65 + (t - 16.05) * 0.9;
