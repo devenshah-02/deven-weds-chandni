@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Deven Weds Chandni · 14 & 15 February 2027</title>
+  <meta name="description" content="Deven &amp; Chandni are getting married! Join us 14–15 Feb 2027 at Hotel Gautam, Lonavala." />
+  <meta name="theme-color" content="#3a0f1f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Deven Weds Chandni · 14 & 15 February 2027" />
+  <meta property="og:description" content="Deven &amp; Chandni are getting married! Join us 14–15 Feb 2027 at Hotel Gautam, Lonavala." />
+  <meta property="og:image" content="/images/story/1.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Deven Weds Chandni · 14 & 15 February 2027" />
+  <meta name="twitter:description" content="Deven &amp; Chandni are getting married! Join us 14–15 Feb 2027 at Hotel Gautam, Lonavala." />
+  <meta name="twitter:image" content="/images/story/1.jpeg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%236b1a35'/%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%23c9a15b' stroke-width='2'/%3E%3Ctext x='50' y='61' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='34' fill='%23fbf4ee'%3EC%26D%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/images/ganesh.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Italiana&family=Jost:wght@400;500;600&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="is-locked">
+
+  <!-- ============ INTRO: ENVELOPE ============ -->
+  <div class="intro" id="intro" aria-label="Invitation envelope">
+    <div class="intro__grain"></div>
+    <div class="intro__glow"></div>
+    <p class="intro__kicker">You're Invited</p>
+
+    <div class="envelope" id="envelope">
+      <div class="envelope__back"></div>
+      <div class="letter" id="letter">
+        <span class="letter__om">ॐ</span>
+        <h2 class="letter__names"><span>Deven</span><em>weds</em><span>Chandni</span></h2>
+        <p class="letter__line">We are so excited to celebrate with you</p>
+        <p class="letter__date">14 · 15 February 2027</p>
+      </div>
+      <svg class="envelope__pocket" viewBox="0 0 100 66" preserveAspectRatio="none" aria-hidden="true">
+        <polygon points="0,0 52,38 0,66" fill="#ead6c4" />
+        <polygon points="100,0 48,38 100,66" fill="#e4cdb9" />
+        <polygon points="0,66 50,32 100,66" fill="#f1e2d4" />
+      </svg>
+      <div class="envelope__flap"></div>
+      <button class="seal" id="seal" aria-label="Open the invitation">
+        <svg class="seal__ring" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="sealCircle" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" /></defs>
+          <text><textPath href="#sealCircle">CHANDNI ✦ DEVEN ✦ XIV · II · MMXXVII ✦ </textPath></text>
+        </svg>
+        <span class="seal__mono">C<i>&amp;</i>D</span>
+      </button>
+    </div>
+
+    <p class="intro__hint" id="introHint"><span class="pulse-dot"></span> Tap the seal to open</p>
+  </div>
+
+  <!-- ============ CHROME ============ -->
+  <div class="progress" id="progress"></div>
+  <canvas class="petals" id="petals" aria-hidden="true"></canvas>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <button class="music" id="music" aria-label="Toggle music">
+    <span class="music__disc"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg></span>
+    <span class="music__bars"><i></i><i></i><i></i><i></i></span>
+    <span class="music__label">Our song</span>
+  </button>
+  <audio id="song" src="/audio/song.mp3" loop preload="auto"></audio>
+
+  <div class="scroll-nudge" id="scrollNudge" aria-hidden="true">
+    <span class="scroll-nudge__arrow">↓</span>
+    <span>Scroll down to continue</span>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__mandala" aria-hidden="true">
+        <svg viewBox="0 0 400 400" id="mandala"></svg>
+      </div>
+      <div class="hero__inner">
+        <div class="ganesh reveal-up">
+          <span class="ganesh__halo"></span>
+          <img src="/images/ganesh.png" alt="Shri Ganesh" />
+        </div>
+        <p class="shloka reveal-up">
+          <span class="shloka__title">॥ श्री गणेशाय नमः ॥</span>
+          <span>वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ</span>
+          <span>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</span>
+        </p>
+        <p class="hero__blessing reveal-up">With the blessings of Shri Ganesh and our families,<br />we joyfully invite you to celebrate the union of</p>
+
+        <h1 class="hero__names">
+          <span class="name split" data-split>Deven</span>
+          <span class="hero__weds"><i class="line"></i><em>weds</em><i class="line"></i></span>
+          <span class="name split" data-split>Chandni</span>
+        </h1>
+
+        <p class="hero__tag reveal-up">We are getting married</p>
+        <p class="hero__date reveal-up">
+          <span>14</span><b>·</b><span>15</span>
+          <small>February 2027 · Lonavala</small>
+        </p>
+      </div>
+      <a href="#countdown" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Deven <i>&amp;</i> Chandni</span><b>✦</b><span>14 · 15 Feb 2027</span><b>✦</b><span>Hotel Gautam, Lonavala</span><b>✦</b><span>#DevenWedsChandni</span><b>✦</b>
+        <span>Deven <i>&amp;</i> Chandni</span><b>✦</b><span>14 · 15 Feb 2027</span><b>✦</b><span>Hotel Gautam, Lonavala</span><b>✦</b><span>#DevenWedsChandni</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ============ SCRATCH + COUNTDOWN ============ -->
+    <section class="countdown" id="countdown">
+      <p class="eyebrow reveal-up">Save the date</p>
+      <h2 class="title reveal-up">Tap to reveal <em>our special day</em></h2>
+
+      <div class="scratch reveal-up" id="scratch">
+        <div class="scratch__under">
+          <span class="scratch__day">Sunday &amp; Monday</span>
+          <span class="scratch__big">14<b>&amp;</b>15</span>
+          <span class="scratch__month">February 2027</span>
+        </div>
+        <button class="foil" id="foil" type="button" aria-label="Tap to reveal the wedding dates">
+          <span class="foil__half foil__half--l"></span>
+          <span class="foil__half foil__half--r"></span>
+          <span class="foil__seal"><span class="foil__ring"></span><b>C<i>&amp;</i>D</b></span>
+          <span class="foil__hint">✦ Tap to reveal ✦</span>
+        </button>
+      </div>
+
+      <div class="timer" id="timer">
+        <div class="timer__cell"><span class="timer__num" data-unit="d">00</span><span class="timer__lbl">Days</span></div>
+        <div class="timer__cell"><span class="timer__num" data-unit="h">00</span><span class="timer__lbl">Hours</span></div>
+        <div class="timer__cell"><span class="timer__num" data-unit="m">00</span><span class="timer__lbl">Minutes</span></div>
+        <div class="timer__cell"><span class="timer__num" data-unit="s">00</span><span class="timer__lbl">Seconds</span></div>
+      </div>
+      <p class="countdown__note reveal-up">Two days of celebration · 14 Feb to 15 Feb</p>
+    </section>
+
+    <!-- ============ FAMILIES ============ -->
+    <section class="families" id="families">
+      <p class="eyebrow reveal-up">Two families, one promise</p>
+      <h2 class="title reveal-up">Introducing <em>the families</em></h2>
+
+      <div class="families__grid">
+        <article class="fam-card tilt" data-side="left">
+          <div class="fam-card__arch">
+            <span class="fam-card__initial">C</span>
+            <span class="fam-card__role">The Bride</span>
+            <h3>Chandni Sheth</h3>
+            <p class="fam-card__parents">Daughter of<br /><strong>Shekhar Babubhai Sheth</strong><br />&amp; <strong>Mona Shekhar Sheth</strong></p>
+            <p class="fam-card__grand">Granddaughter of Late Babubhai K Sheth<br />&amp; Shobhnaben B Sheth</p>
+            <div class="fam-card__divider"></div>
+            <ul class="fam-card__kin">
+              <li><span>Younger Brother</span>Pratham Sheth</li>
+              <li><span>Fur Babies</span>Chikku &amp; Late Tuffy <em>🐾</em></li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="families__mono" aria-hidden="true">
+          <svg viewBox="0 0 200 200" class="families__ring">
+            <defs><path id="famCircle" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" /></defs>
+            <text><textPath href="#famCircle">TWO HEARTS ✦ ONE SOUL ✦ TWO FAMILIES ✦ ONE PROMISE ✦ </textPath></text>
+          </svg>
+          <span>C<i>&amp;</i>D</span>
+        </div>
+
+        <article class="fam-card tilt" data-side="right">
+          <div class="fam-card__arch">
+            <span class="fam-card__initial">D</span>
+            <span class="fam-card__role">The Groom</span>
+            <h3>Deven Shah</h3>
+            <p class="fam-card__parents">Son of<br /><strong>Dilipkumar Jayantilal Shah</strong><br />&amp; <strong>Sangita Dilipkumar Shah</strong></p>
+            <p class="fam-card__grand">Grandson of Late Jayantilal M Shah<br />&amp; Late Kantaben J Shah</p>
+            <div class="fam-card__divider"></div>
+            <ul class="fam-card__kin">
+              <li><span>Elder Sister</span>Dolly Shah</li>
+              <li class="fam-card__note">married to Dharmit Zaveri,<br />proud parents to little Avi</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <p class="families__quote reveal-up">Raised with love, united by destiny, together forever.</p>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section class="story" id="story">
+      <div class="story__bigword" aria-hidden="true"><span>Forever</span><span>Forever</span></div>
+      <div class="story__grid">
+        <div class="story__text">
+          <p class="eyebrow reveal-up">Our story</p>
+          <h2 class="title title--left split-lines">Some chapters are <em>written by destiny</em></h2>
+          <p class="story__p reveal-up">Two people, a lot of laughter, and a feeling that only grew stronger with every conversation. What started as a chance meeting became our favourite chapter, and now we can't wait to write the rest of the book together.</p>
+          <p class="story__sign reveal-up">And then, there was <em>us.</em></p>
+        </div>
+        <div class="story__photo">
+          <div class="slider" id="slider" tabindex="0" aria-roledescription="carousel" aria-label="Our story photos">
+            <div class="slider__frame">
+              <div class="slider__stage" id="sliderStage">
+              <figure class="slide" data-i="0"><img src="/images/story/1.jpeg" alt="And then, there was us" /></figure>
+              <figure class="slide" data-i="1"><img src="/images/story/2.jpeg" alt="A thousand little moments led here" loading="lazy" /></figure>
+              <figure class="slide" data-i="2"><img src="/images/story/3.jpeg" alt="From strangers to soulmates" loading="lazy" /></figure>
+              <figure class="slide" data-i="3"><img src="/images/story/4.jpeg" alt="Adventures, just the two of us" loading="lazy" /></figure>
+              <figure class="slide" data-i="4"><img src="/images/story/5.jpeg" alt="Meeting the families" loading="lazy" /></figure>
+              <figure class="slide" data-i="5"><img src="/images/story/6.jpeg" alt="Love found its way home" loading="lazy" /></figure>
+              <figure class="slide" data-i="6"><img src="/images/story/7.jpeg" alt="Through every season together" loading="lazy" /></figure>
+              <figure class="slide" data-i="7"><img src="/images/story/8.jpeg" alt="Building a life we love" loading="lazy" /></figure>
+              <figure class="slide" data-i="8"><img src="/images/story/9.jpeg" alt="Making memories, one adventure at a time" loading="lazy" /></figure>
+              <figure class="slide" data-i="9"><img src="/images/story/10.jpeg" alt="Our best adventure begins now" loading="lazy" /></figure>
+              </div>
+              <p class="slider__cap" id="sliderCap" aria-live="polite">And then, there was us</p>
+              <span class="slider__count" id="sliderCount">01 / 10</span>
+            </div>
+            <span class="slider__stamp" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="stampC" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" /></defs><text><textPath href="#stampC">FOREVER ✦ FOREVER ✦ FOREVER ✦ </textPath></text></svg><b>C<i>&amp;</i>D</b></span>
+          </div>
+          <div class="slider__nav">
+            <button type="button" class="slider__btn" id="sliderPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" /></svg></button>
+            <div class="slider__dots" id="sliderDots"><button type="button" aria-label="Photo 1" class="is-on"></button><button type="button" aria-label="Photo 2"></button><button type="button" aria-label="Photo 3"></button><button type="button" aria-label="Photo 4"></button><button type="button" aria-label="Photo 5"></button><button type="button" aria-label="Photo 6"></button><button type="button" aria-label="Photo 7"></button><button type="button" aria-label="Photo 8"></button><button type="button" aria-label="Photo 9"></button><button type="button" aria-label="Photo 10"></button></div>
+            <button type="button" class="slider__btn" id="sliderNext" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section class="events" id="events">
+      <div class="events__head">
+        <p class="eyebrow reveal-up">The itinerary</p>
+        <h2 class="title reveal-up">Schedule <em>of events</em></h2>
+        <p class="sub reveal-up">A celebration of tradition, love &amp; family</p>
+      </div>
+
+      <div class="events__pin" id="eventsPin">
+        <div class="events__track" id="eventsTrack">
+
+          <article class="ev" style="--ev:#e0a21b; --ev-2:#f7d873">
+            <div class="ev__day">Day 1 · Sun, 14 Feb</div>
+            <button class="ev__img" data-full="/images/events/haldi.jpg" aria-label="View Haldi invitation"><img src="/images/events/haldi.jpg" alt="Haldi invitation" loading="lazy" /><span class="ev__zoom">View card</span></button>
+            <canvas class="ev__fx" data-fx="haldi" aria-hidden="true"></canvas>
+            <div class="ev__body">
+              <span class="ev__num">01</span>
+              <h3>Haldi Ceremony</h3>
+              <p class="ev__time">11:30 AM onwards</p>
+              <p class="ev__desc">Turmeric, marigolds and a whole lot of yellow. Come ready to get messy.</p>
+              <a class="ev__cal" data-cal="haldi" href="#">＋ Add to calendar</a>
+            </div>
+          </article>
+
+          <article class="ev" style="--ev:#c9a15b; --ev-2:#1a1410">
+            <div class="ev__day">Day 1 · Sun, 14 Feb</div>
+            <button class="ev__img" data-full="/images/events/sangeet.jpg" aria-label="View Sangeet invitation"><img src="/images/events/sangeet.jpg" alt="Sangeet invitation" loading="lazy" /><span class="ev__zoom">View card</span></button>
+            <canvas class="ev__fx" data-fx="sangeet" aria-hidden="true"></canvas>
+            <div class="ev__body">
+              <span class="ev__num">02</span>
+              <h3>Sangeet Night</h3>
+              <p class="ev__time">7:00 PM onwards</p>
+              <p class="ev__desc">An evening of music, dance and glamour. A night of Bollywood glitz &amp; bling!</p>
+              <a class="ev__cal" data-cal="sangeet" href="#">＋ Add to calendar</a>
+            </div>
+          </article>
+
+          <article class="ev" style="--ev:#1f8a8a; --ev-2:#7fd3cf">
+            <div class="ev__day">Day 2 · Mon, 15 Feb</div>
+            <button class="ev__img" data-full="/images/events/pool.jpg" aria-label="View Pool Party invitation"><img src="/images/events/pool.jpg" alt="Pool party invitation" loading="lazy" /><span class="ev__zoom">View card</span></button>
+            <canvas class="ev__fx" data-fx="pool" aria-hidden="true"></canvas>
+            <div class="ev__body">
+              <span class="ev__num">03</span>
+              <h3>Pool Party</h3>
+              <p class="ev__time">9:30 AM onwards</p>
+              <p class="ev__desc">Sunshine, floaties and good vibes. A pool party on our wedding day!</p>
+              <a class="ev__cal" data-cal="pool" href="#">＋ Add to calendar</a>
+            </div>
+          </article>
+
+          <article class="ev ev--wide" style="--ev:#8b1e3f; --ev-2:#e7b6a8">
+            <div class="ev__day">Day 2 · Mon, 15 Feb</div>
+            <button class="ev__img" data-full="/images/events/wedding.jpg" aria-label="View Wedding invitation"><img src="/images/events/wedding.jpg" alt="Wedding invitation" loading="lazy" /><span class="ev__zoom">View card</span></button>
+            <canvas class="ev__fx" data-fx="wedding" aria-hidden="true"></canvas>
+            <div class="ev__body">
+              <span class="ev__num">04</span>
+              <h3>Shubh Vivah</h3>
+              <p class="ev__time">4:00 PM onwards</p>
+              <p class="ev__desc">The auspicious wedding ceremony. Seven vows, one forever.</p>
+              <a class="ev__cal" data-cal="wedding" href="#">＋ Add to calendar</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VENUE ============ -->
+    <section class="venue" id="venue">
+      <p class="eyebrow reveal-up">Where to find us</p>
+      <h2 class="title reveal-up">The <em>venue</em></h2>
+      <div class="venue__card reveal-up">
+        <div class="venue__map">
+          <iframe title="Map of Hotel Gautam, Lonavala" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Hotel%20Gautam%2C%20Lonavala&output=embed"></iframe>
+          <div class="venue__pin"><span></span></div>
+        </div>
+        <div class="venue__info">
+          <span class="venue__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z" /><circle cx="12" cy="9.5" r="2.6" /></svg>
+          </span>
+          <h3>Hotel Gautam</h3>
+          <p class="venue__city">Lonavala, Maharashtra</p>
+          <p class="venue__note">All celebrations take place here</p>
+          <a class="btn magnetic" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Gautam%2C%20Lonavala">
+            <span>Get directions</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RSVP ============ -->
+    <section class="rsvp" id="rsvp">
+      <div class="rsvp__card">
+        <span class="rsvp__mono">C<i>&amp;</i>D</span>
+        <p class="eyebrow">Kindly reply</p>
+        <h2 class="title">Will you <em>join us?</em></h2>
+
+        <form id="rsvpForm" novalidate>
+          <label class="field">
+            <span>Full name *</span>
+            <input name="name" type="text" placeholder="Your full name" required autocomplete="name" />
+          </label>
+
+          <div class="field">
+            <span>Will you be attending?</span>
+            <div class="toggle" id="attendToggle">
+              <span class="toggle__pill"></span>
+              <button type="button" data-val="yes" class="is-on">Joyfully accept</button>
+              <button type="button" data-val="no">Regretfully decline</button>
+            </div>
+            <input type="hidden" name="attending" value="yes" />
+          </div>
+
+          <div class="rsvp__yes" id="rsvpYes">
+            <div class="field">
+              <span>Number of guests *</span>
+              <div class="stepper">
+                <button type="button" data-step="-1" aria-label="Fewer guests">−</button>
+                <output id="guestOut">1</output>
+                <button type="button" data-step="1" aria-label="More guests">+</button>
+              </div>
+              <input type="hidden" name="guests" value="1" />
+            </div>
+
+            <div class="field">
+              <span>Your wedding mood: I'm coming for… *</span>
+              <div class="chips" id="moodChips">
+                <button type="button" data-val="food"><b>🍛</b>The food</button>
+                <button type="button" data-val="dance"><b>💃</b>Dance floor</button>
+                <button type="button" data-val="love"><b>❤️</b>The love</button>
+                <button type="button" data-val="all"><b>✨</b>All of it</button>
+              </div>
+              <input type="hidden" name="mood" value="" />
+            </div>
+          </div>
+          <p class="rsvp__miss" id="rsvpMiss">😢 We'll miss you. Thank you for letting us know.</p>
+
+          <label class="field">
+            <span>Leave us a note: a wish or a memory</span>
+            <textarea name="note" rows="3" placeholder="Write something from the heart…"></textarea>
+          </label>
+          <label class="field">
+            <span>Words for forever: advice for married life</span>
+            <textarea name="advice" rows="2" placeholder="One piece of advice…"></textarea>
+          </label>
+
+          <p class="rsvp__err" id="rsvpErr" role="alert"></p>
+          <button class="btn btn--full magnetic" type="submit"><span>Send RSVP</span><svg viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-2.5-6.5z" /></svg></button>
+          <p class="rsvp__foot">Celebrate this new chapter with us. Replies come straight to the couple.</p>
+        </form>
+
+        <div class="rsvp__done" id="rsvpDone" hidden>
+          <div class="rsvp__check"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" /><path d="M14 27l8 8 16-17" /></svg></div>
+          <h3 id="doneTitle">Thank you!</h3>
+          <p id="doneMsg">We can't wait to celebrate with you.</p>
+          <button class="link" id="rsvpAgain" type="button">Edit response</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <p class="eyebrow reveal-up">With love &amp; gratitude</p>
+      <h2 class="footer__names split" data-split>Deven &amp; Chandni</h2>
+      <button class="footer__tag" id="hashtag" type="button">#DevenWedsChandni <small>tap to copy</small></button>
+      <p class="footer__thanks reveal-up">Thank you for being part of our story.</p>
+      <div class="footer__diya" aria-hidden="true"><span></span><span></span><span></span></div>
+    </footer>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Close">×</button>
+    <img alt="" />
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

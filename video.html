@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Invite video stage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Italiana&family=Pinyon+Script&family=Tiro+Devanagari+Sanskrit&display=block" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/video.css" />
+</head>
+<body>
+<div id="stage">
+  <div class="bg bg--wine" id="bgWine"></div>
+  <div class="bg bg--cream" id="bgCream"></div>
+  <div class="bg bg--dark" id="bgDark">
+    <img class="ev-blur" src="/images/events/haldi.jpg" alt="" />
+    <img class="ev-blur" src="/images/events/sangeet.jpg" alt="" />
+    <img class="ev-blur" src="/images/events/pool.jpg" alt="" />
+    <img class="ev-blur" src="/images/events/wedding.jpg" alt="" />
+  </div>
+  <div class="mandala" id="mandalaWrap"><svg viewBox="0 0 400 400" id="mandala"></svg></div>
+
+  <!-- S1 ENVELOPE -->
+  <section class="scene s1" id="s1">
+    <p class="s1__kicker">You're invited</p>
+    <div class="envelope" id="envelope">
+      <div class="envelope__back"></div>
+      <div class="letter" id="letter">
+        <span class="letter__om">ॐ</span>
+        <span class="letter__name">Deven</span>
+        <span class="letter__weds">weds</span>
+        <span class="letter__name">Chandni</span>
+        <span class="letter__date">14 &amp; 15 February 2027</span>
+      </div>
+      <svg class="envelope__pocket" viewBox="0 0 100 66" preserveAspectRatio="none">
+        <polygon points="0,0 52,38 0,66" fill="#ead6c4" />
+        <polygon points="100,0 48,38 100,66" fill="#e4cdb9" />
+        <polygon points="0,66 50,32 100,66" fill="#f1e2d4" />
+      </svg>
+      <div class="envelope__flap" id="flap"></div>
+      <div class="seal" id="seal"><span>D<i>&amp;</i>C</span></div>
+    </div>
+    <p class="s1__sub">to celebrate the wedding of</p>
+  </section>
+
+  <!-- S2 NAMES -->
+  <section class="scene s2" id="s2">
+    <div class="ganesh"><img src="/images/ganesh.png" alt="" /></div>
+    <p class="shloka">
+      <span class="shloka__title">॥ श्री गणेशाय नमः ॥</span>
+      <span>वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ</span>
+      <span>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</span>
+    </p>
+    <p class="blessing">With the blessings of Shri Ganesh and our families, we joyfully invite you to celebrate the union of</p>
+    <h1 class="names">
+      <span class="name" data-split>Deven</span>
+      <span class="weds"><i></i><em>weds</em><i></i></span>
+      <span class="name" data-split>Chandni</span>
+    </h1>
+    <p class="tag">We are getting married</p>
+  </section>
+
+  <!-- S3 SAVE THE DATE -->
+  <section class="scene s3" id="s3">
+    <p class="eyebrow">Save the date</p>
+    <h2 class="title">Our <em>special day</em></h2>
+    <div class="card" id="scratchCard">
+      <div class="card__under">
+        <span class="card__day">Sunday &amp; Monday</span>
+        <span class="card__big">14<b>&amp;</b>15</span>
+        <span class="card__month">February 2027</span>
+      </div>
+      <canvas id="foil" width="860" height="500"></canvas>
+      <div class="tapseal" id="tapseal"><span class="tapring" id="tapring"></span><b>D<i>&amp;</i>C</b></div>
+    </div>
+    <p class="s3__note">Two days of celebration<br /><b>Hotel Gautam, Lonavala</b></p>
+    <p class="pill">✦ On the invite: tap to reveal &amp; live countdown</p>
+  </section>
+
+  <!-- S4 FAMILIES -->
+  <section class="scene s4" id="s4">
+    <p class="eyebrow">Two families, one promise</p>
+    <h2 class="title">Introducing <em>the families</em></h2>
+    <article class="fam fam--top" id="famA">
+      <span class="fam__role">The Bride</span>
+      <h3>Chandni Sheth</h3>
+      <p class="fam__of">Daughter of</p>
+      <p class="fam__parents">Shekhar Babubhai Sheth<br />&amp; Mona Shekhar Sheth</p>
+      <p class="fam__kin"><span>Brother</span> Pratham Sheth <b>·</b> <span>Fur baby</span> Chikku 🐾</p>
+    </article>
+    <div class="ring" id="ring">
+      <svg viewBox="0 0 200 200"><defs><path id="rc" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" /></defs><text><textPath href="#rc">TWO HEARTS ✦ ONE SOUL ✦ TWO FAMILIES ✦ ONE PROMISE ✦ </textPath></text></svg>
+      <span>D<i>&amp;</i>C</span>
+    </div>
+    <article class="fam fam--bottom" id="famB">
+      <span class="fam__role">The Groom</span>
+      <h3>Deven Shah</h3>
+      <p class="fam__of">Son of</p>
+      <p class="fam__parents">Dilipkumar Jayantilal Shah<br />&amp; Sangita Dilipkumar Shah</p>
+      <p class="fam__grand">Grandson of Late Jayantilal M Shah &amp; Late Kantaben J Shah</p>
+      <p class="fam__kin"><span>Sister</span> Dolly Shah, with Dharmit Zaveri &amp; little Avi</p>
+    </article>
+  </section>
+
+  <!-- S4b STORY -->
+  <section class="scene s4b" id="s4b">
+    <p class="eyebrow">Our story</p>
+    <h2 class="title">Written <em>by destiny</em></h2>
+    <div class="vgrid">
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/1.jpeg" alt="" /></div><figcaption>And then, there was us</figcaption></figure>
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/2.jpeg" alt="" /></div><figcaption>A thousand little moments led here</figcaption></figure>
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/3.jpeg" alt="" /></div><figcaption>From strangers to soulmates</figcaption></figure>
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/4.jpeg" alt="" /></div><figcaption>Adventures, just the two of us</figcaption></figure>
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/5.jpeg" alt="" /></div><figcaption>Meeting the families</figcaption></figure>
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/6.jpeg" alt="" /></div><figcaption>Love found its way home</figcaption></figure>
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/7.jpeg" alt="" /></div><figcaption>Through every season together</figcaption></figure>
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/8.jpeg" alt="" /></div><figcaption>Building a life we love</figcaption></figure>
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/9.jpeg" alt="" /></div><figcaption>Making memories, one adventure at a time</figcaption></figure>
+      <figure class="vpol"><div class="vpol__img"><img src="/images/story/10.jpeg" alt="" /></div><figcaption>Our best adventure begins now</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- S5 EVENTS -->
+  <section class="scene s5" id="s5">
+    <div class="s5__head">
+      <p class="eyebrow eyebrow--light">The itinerary</p>
+      <h2 class="title title--light">Schedule <em>of events</em></h2>
+    </div>
+    <div class="track" id="track">
+      <div class="slide" style="--ac:#f2b632">
+        <div class="slide__media"><div class="frame"><img src="/images/events/haldi.jpg" alt="" /></div></div>
+        <div class="slide__text"><span class="chip">Day 1 · Sunday, 14 Feb</span><h3>Haldi Ceremony</h3><p>11:30 AM onwards</p></div>
+      </div>
+      <div class="slide" style="--ac:#e8cf94">
+        <div class="slide__media"><div class="frame"><img src="/images/events/sangeet.jpg" alt="" /></div></div>
+        <div class="slide__text"><span class="chip">Day 1 · Sunday, 14 Feb</span><h3>Sangeet Night</h3><p>7:00 PM onwards</p></div>
+      </div>
+      <div class="slide slide--pool" style="--ac:#5fd0c9">
+        <div class="slide__media"><div class="frame"><img src="/images/events/pool.jpg" alt="" /></div></div>
+        <div class="slide__text"><span class="chip">Day 2 · Monday, 15 Feb</span><h3>Pool Party</h3><p>9:30 AM onwards</p></div>
+      </div>
+      <div class="slide slide--wide" style="--ac:#f0a3b8">
+        <div class="slide__media"><div class="frame"><img src="/images/events/wedding.jpg" alt="" /></div></div>
+        <div class="slide__text"><span class="chip">Day 2 · Monday, 15 Feb</span><h3>Shubh Vivah</h3><p>4:00 PM onwards</p></div>
+      </div>
+    </div>
+    <div class="dots"><i></i><i></i><i></i><i></i></div>
+    <p class="pill pill--dark">＋ On the invite: add any event to your calendar</p>
+  </section>
+
+  <!-- S6 VENUE -->
+  <section class="scene s6" id="s6">
+    <svg class="map" viewBox="0 0 1080 1920" preserveAspectRatio="none" id="map">
+      <path d="M-20 520 C 260 600, 420 480, 640 640 S 980 760, 1100 700" />
+      <path d="M-20 1180 C 200 1100, 380 1240, 560 1150 S 900 1000, 1100 1080" />
+      <path d="M300 -20 C 340 300, 260 600, 420 900 S 520 1500, 460 1940" />
+      <path d="M820 -20 C 760 280, 880 640, 700 920 S 640 1500, 780 1940" />
+      <path d="M-20 860 L 1100 980" class="thin" />
+      <path d="M-20 1500 C 300 1440, 700 1600, 1100 1460" class="thin" />
+      <path d="M140 -20 L 220 1940" class="thin" />
+    </svg>
+    <p class="eyebrow">Where to find us</p>
+    <h2 class="title">The <em>venue</em></h2>
+    <div class="pin" id="pin">
+      <span class="ripple"></span><span class="ripple"></span>
+      <svg viewBox="0 0 24 24"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z" /><circle cx="12" cy="9.5" r="2.6" /></svg>
+    </div>
+    <div class="venue">
+      <h3>Hotel Gautam</h3>
+      <p class="venue__city">Lonavala, Maharashtra</p>
+      <p class="venue__note">All celebrations take place here</p>
+    </div>
+    <p class="pill">📍 On the invite: one tap directions</p>
+  </section>
+
+  <!-- S7 FINALE -->
+  <section class="scene s7" id="s7">
+    <p class="eyebrow eyebrow--light">With love &amp; gratitude</p>
+    <h2 class="final-names" data-split>Deven &amp; Chandni</h2>
+    <p class="final-date">14 &amp; 15 February 2027<br /><span>Hotel Gautam, Lonavala</span></p>
+    <div class="features">
+      <span>💌 RSVP in a few taps</span>
+      <span>👆 Tap to reveal</span>
+      <span>📅 Add to calendar</span>
+      <span>📍 Get directions</span>
+      <span>⏳ Live countdown</span>
+      <span>🎵 Play our song</span>
+    </div>
+    <p class="open">Open your invite &amp; RSVP</p>
+    <p class="url" data-url>deven-weds-chandni.vercel.app</p>
+    <p class="hashtag">#DevenWedsChandni</p>
+  </section>
+
+  <canvas id="fx" width="1080" height="1920"></canvas>
+  <div class="vignette"></div>
+</div>
+<script type="module" src="/src/video.js"></script>
+</body>
+</html>
