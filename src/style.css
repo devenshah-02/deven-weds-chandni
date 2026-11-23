@@ -696,7 +696,7 @@ section { position: relative; z-index: 2; padding: clamp(80px, 12vw, 150px) var(
   position: absolute; top: -38px; left: 50%; translate: -50% 0;
   width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center;
   background: radial-gradient(circle at 35% 30%, #b13a5c, #7a1734 55%, #4f0c22);
-  color: var(--gold-2); font-family: var(--f-script); font-size: 1.7rem;
+  color: var(--gold-2); font-family: var(--f-script); font-size: 1.3rem; white-space: nowrap;
   box-shadow: 0 14px 30px rgba(0,0,0,.35), inset 0 -4px 10px rgba(0,0,0,.3);
 }
 .rsvp__mono i { font-family: var(--f-serif); font-size: .8rem; }
